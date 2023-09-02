@@ -58,11 +58,20 @@ const App=()=> {
               infinite: false,
               dots: false
             }
+          },
+          {
+            breakpoint: 1020,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: false
+            }
           }
     ]
   }
-  const showPrevArrow = currentSlide > 1;
-  const showNextArrow = currentSlide < slideData.length - settings.slidesToShow-1;
+  const showPrevArrow = currentSlide > 0;
+  const showNextArrow = currentSlide < slideData.length - settings.slidesToShow;
 
   settings.prevArrow = showPrevArrow ? <CustomPrevArrow /> : '';
   settings.nextArrow = showNextArrow ? <CustomNextArrow /> : '';
@@ -88,6 +97,18 @@ const App=()=> {
           </div>
         </div>
       </div>
+
+      <div className="home-top-sub-small-container">
+      <div className='home-top-sub-container'>
+            <p className='bar-soaps-para'>Bar Soaps</p>
+            <h1  className='home-heading'> A body care calssic, reimagined</h1>
+            <p className='bar-soaps-para'>Breathing new life into the humble bar soap are Nurture,<br/>
+               Polish and Refresh—three additions to the range, each imparting<br/>
+                a unique constellation of benefits.</p>
+            <button type="button" className='discover-button'>Discover Bar Soaps <BiRightArrowAlt /></button>
+          </div>
+      </div>
+
       <div className="slides">
           <div className="slider-container">
             <Slider {...settings}>
@@ -149,16 +170,6 @@ const App=()=> {
         <div className="indicator-container">{indicators}</div>
       </div>
 
-      <div className="home-top-sub-small-container">
-      <div className='home-top-sub-container'>
-            <p className='bar-soaps-para'>Bar Soaps</p>
-            <h1  className='home-heading'> A body care calssic, reimagined</h1>
-            <p className='bar-soaps-para'>Breathing new life into the humble bar soap are Nurture,<br/>
-               Polish and Refresh—three additions to the range, each imparting<br/>
-                a unique constellation of benefits.</p>
-            <button type="button" className='discover-button'>Discover Bar Soaps <BiRightArrowAlt /></button>
-          </div>
-      </div>
       <dvi className="warp-up-main-container">
         <div className="warp-up-sub-container">
           <p className="warp-up">The Athenaeum</p>
@@ -187,25 +198,25 @@ const App=()=> {
                   </div> 
 
                    <div  className="brand-image">
-                      <img src={SkinLucentFacial} alt="CELEBRE125x125" className='image-brand' />
+                      <img src={SkinLucentFacial} alt="CELEBRE125x125" className='image-brand' style={{marginTop:"100px"}}/>
                       <h1 className="nature-bar-soaps-heading">Nature Bar Soaps</h1>
                       <p className="nature-bar-sopas-desc">Offers a mild yet effective cleanse</p>
                   </div>
 
                   <div  className="brand-image">
-                    <img src={PurifyingFacialCream} alt="CELEBRE125x125" className='image-brand' />
+                    <img src={PurifyingFacialCream} alt="CELEBRE125x125" className='image-brand' style={{marginTop:"100px"}}/>
                     <h1 className="nature-bar-soaps-heading">Nature Bar Soaps</h1>
                       <p className="nature-bar-sopas-desc">Offers a mild yet effective cleanse</p>
                   </div>
 
                   <div  className="brand-image">
-                    <img src={SeedAntiOxidant} alt="CELEBRE125x125" className='image-brand' />
+                    <img src={SeedAntiOxidant} alt="CELEBRE125x125" className='image-brand' style={{marginTop:"190px"}} />
                     <h1 className="nature-bar-soaps-heading">Nature Bar Soaps</h1>
                       <p className="nature-bar-sopas-desc">Offers a mild yet effective cleanse</p>
                   </div>
 
                    <div  className="brand-image">
-                    <img src={NutFacialHydrating} alt="CELEBRE125x125" className='image-brand' />
+                    <img src={NutFacialHydrating} alt="CELEBRE125x125" className='image-brand' style={{marginTop:"100px"}}/>
                     <h1 className="nature-bar-soaps-heading">Nature Bar Soaps</h1>
                       <p className="nature-bar-sopas-desc">Offers a mild yet effective cleanse</p>
                   </div>
@@ -259,25 +270,25 @@ const App=()=> {
                   </div> 
 
                    <div  className="brand-image">
-                      <img src={AromatiqueCandle} alt="CELEBRE125x125" className='image-brand' />
+                      <img src={AromatiqueCandle} alt="CELEBRE125x125" className='image-brand' style={{marginTop:"100px"}}/>
                       <h1 className="nature-bar-soaps-heading">Nature Bar Soaps</h1>
                       <p className="nature-bar-sopas-desc">Offers a mild yet effective cleanse</p>
                   </div>
 
                   <div  className="brand-image">
-                    <img src={BrnozeIncense} alt="CELEBRE125x125" className='image-brand' />
+                    <img src={BrnozeIncense} alt="CELEBRE125x125" className='image-brand' style={{marginTop:"125px"}}/>
                     <h1 className="nature-bar-soaps-heading">Nature Bar Soaps</h1>
                       <p className="nature-bar-sopas-desc">Offers a mild yet effective cleanse</p>
                   </div>
 
                   <div  className="brand-image">
-                    <img src={MurasakiAromatique} alt="CELEBRE125x125" className='image-brand' />
+                    <img src={MurasakiAromatique} alt="CELEBRE125x125" className='image-brand' style={{marginTop:"100px"}}/>
                     <h1 className="nature-bar-soaps-heading">Nature Bar Soaps</h1>
                       <p className="nature-bar-sopas-desc">Offers a mild yet effective cleanse</p>
                   </div>
 
                   <div  className="brand-image">
-                    <img src={BodyNuture} alt="CELEBRE125x125" className='image-brand' style={{marginTop:"117px"}} />
+                    <img src={BodyNuture} alt="CELEBRE125x125" className='image-brand' style={{marginTop:"217px"}} />
                     <h1 className="nature-bar-soaps-heading">Nature Bar Soaps</h1>
                       <p className="nature-bar-sopas-desc">Offers a mild yet effective cleanse</p>
                   </div>
