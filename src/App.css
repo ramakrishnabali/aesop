@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,393 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+.home-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
+.top-container{
+  display: flex;
+  background-image: url(./assets/Home/top2.jpg);
+  background-size: cover;
+  height: 500px;
+  padding: 40px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.home-top-container{
+  display: flex;
+  align-items: flex-start;
+  width: 600px;
+  justify-content: space-between;
+  /* border: 3px solid black; */
+}
+.home-top-sub-small-container{
+  display: none;
+}
+@media (max-width:640px) {
+  .top-container{
+    background-image: url(./assets/Home/smallDevice.jpg);
+  background-size: cover;
+    max-width: 100%;
+    /* border: 3px solid black; */
+    padding: 0px;
+  }
+  .home-top-container{
+    display: none;
+  }
+  .home-top-sub-small-container{
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    /* padding: 30px 30px 30px 30px; */
+  }
+  .home-top-sub-container{
+    margin: 30px;
+  }
+}
+.home-heading{
+  color: #ffffff;
+  margin: 7px 0px 0px 0px;
+  font-family: "Suisse Regular,sans-serif";
+  font-weight: 500;
+  font-size: 30px;
+}
+.bar-soaps-para{
+  color: #fffef2;
+  font-family: "Suisse Regular,sans-serif";
+  font-weight: 200;
+  font-size: 17px;
+  margin: 10px 0px 10px 0px;
+  line-height: 27px;
+}
+.discover-button{
+  background-color: transparent;
+  border: 1px solid #fffef2;
+  padding: 18px;
+  color: #fffef2;
+  font-family: "Suisse Regular,sans-serif";
+  font-weight: 200;
+  font-size: 17px;
+  width: 70%;
+  margin: 25px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.warp-up-main-container{
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 0px 0px 0px 0px;
+  margin: 40px 0px 0px 70px;
+}
+.warp-up-sub-container{
+  width: 32%;
+}
+
+.warp-up{
+  font-family :"Suisse sans-serif";
+  font-size:17px;
+  font-weight: 700;
+  color: #333;
+  line-height: 23px;
+}
+.wrap-up-heading{
+  font-family :"Zapf Humanist serif";
+  font-size: 30px;
+  font-weight: 400;
+  color: #333;
+  line-height: 39px;
+}
+.warp-up-para{
+  font-family :"Suisse sans-serif";
+  font-size:18px;
+  font-weight: 500;
+  color: #333;
+  line-height: 23px;
+}
+.warp-up-image{
+  height:480px;
+}
+@media (max-width:1020px) {
+  .warp-up-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .warp-up-sub-container{
+    align-self: center;
+    width: 70%;
+    order: 0;
+    margin-bottom: 40px;
+  }
+  .warp-up-image{
+    order: 1;
+    max-width: 100%;
+    height:480px;
+  }
+}
+@media (max-width:576px) {
+  .warp-up-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 40px 0px 0px 30px;
+  }
+  
+  .warp-up-sub-container{
+    align-self: center;
+    width: 100%;
+    order: 0;
+    margin-bottom: 40px;
+  }
+  .warp-up-image{
+    order: 1;
+    max-width: 100%;
+    height:100%;
+  }
+}
+.warp-up-button{
+  background-color: transparent;
+  border: 1px solid #333;
+  padding: 18px;
+  color: #333;
+  font-family: "Suisse Regular,sans-serif";
+  font-weight: 600;
+  font-size: 18px;
+  width: 70%;
+  margin: 25px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.post-poo-main-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0px 0px 0px 0px;
+  margin: 40px 0px 0px 0px;
+}
+.post-poo-sub-container{
+  width: 32%;
+}
+.post-poo-image{
+  height:480px;
+}
+@media (max-width:1020px) {
+  .post-poo-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .post-poo-sub-container{
+    align-self: center;
+    width: 70%;
+    order: 1;
+  }
+  .post-poo-image{
+    height:480px;
+    order: 0;
+  }
+}
+@media (max-width:576px) {
+  .post-poo-sub-container{
+    /* margin-left: 30px; */
+    width: 90%;
+    order: 1;
+  }
+  .post-poo-image{
+    width: 100%;
+    height: 100%;
+    order: 0;
+  }
+}
+.home-bottom-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.quotation{
+  text-align: center;
+  width: 80%;
+  color: #333;
+  font-family: "Zapf Humanist serif";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.quoted-by{
+  font-family: "Suisse sans-serif";
+font-size :17px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px;
+columns: #333;
+text-align: center;
+}
+/* .custom-slick-prev,
+.custom-slick-next {
+  font-size: 24px; /* Adjust the font size as needed */
+  /* color:#ffffff; Adjust the color as needed */
+  /* background-color: red; 
+  height: 50px; */
+ /* }  */ 
+
+/* .slider-container {
+  background-color: #B9B4C7;
+  color: black;
+  border: 3px solid red;
+  padding: 30px 50px 0px 50px; */
+  /* background-image: url(../../img/Home/TopBgImg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px; */
+/* } */
+.nature-bar-soaps-heading{
+  text-decoration: underline;
+  text-align: center;
+  color: #333;
+  font-size: 21px;
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  width: 90%;
+  margin: 15px 10px;
+  cursor: pointer;
+}
+.nature-bar-sopas-desc{
+  text-align: center;
+  width: 90%;
+  font-size: 17px;
+  color: rgb(51, 51, 51);
+  font-family: "Suisse, sans-serif";
+  font-weight: 400;
+  cursor: pointer;
+}
+
+
+
+.slides{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px 0px 70px 0px;
+  /* border: 3px solid black; */
+  /* margin: 0px 30px 0px 30px; */
+}
+.brand-image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100px;
+  height: 100%;
+  margin: 10px;
+  align-self: flex-end;
+  /* border: 3px solid black; */
+}
+.image-brand{
+  max-height: 380px;
+  width: 90%;   
+}
+
+.slider-container {
+  max-width: 100%;
+   padding: 30px 25px 0px 25px; 
+  position: relative;
+  /* max-width: 800px;  Adjust the width as needed */
+  margin: 0 auto;
+  /* border: 3px solid red; */
+}
+
+/* Styling for the individual slides */
+.slide {
+  text-align: center; 
+  background-color: transparent;
+  width: 100%;
+}
+
+/* Styling for the prev/next arrows */
+.slick-prev,
+.slick-next {
+ 
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px; /* Adjust the width as needed */
+  height: 80px; /* Adjust the height as needed */
+  background-color: black; /* Background color */
+  color: rgba(0, 0, 0, 0.5); /* Arrow color */
+  /* border-radius: 50%; */
+  cursor: pointer;
+  z-index: 1; /* Ensure arrows are above the slides */
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color:black; /* Hover background color */
+}
+
+.slider-container:hover .slick-prev,
+.slider-container:hover .slick-next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Styling for the arrow icons (optional) */
+.slick-prev::before,
+.slick-next::before {
+  /* content: '\2190';  Left arrow icon */ 
+  font-size: 30px; /* Adjust the font size as needed */
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.slick-next::before {
+  content: '\2192'; /* Right arrow icon */
+}
+
+
+
+/* Add this CSS to your stylesheets */
+.indicator-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 10px;
+  width: 95%;
+  align-self: center;
+}
+
+.indicator-line {
+  width: 60%;
+  height: 3px;
+  background-color: #333;
+  margin: 0px;
+  border-radius: 0px;
+  transition: background-color 0.3s ease;
+}
+
+.indicator-line.active {
+  background-color: #007bff; /* Change to your active color */
+}
+

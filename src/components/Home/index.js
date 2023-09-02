@@ -1,0 +1,9 @@
+import "./index.css"
+
+
+
+const Home = ()=>(
+    <h1>Hello world!!!</h1>
+)
+
+export default Home
