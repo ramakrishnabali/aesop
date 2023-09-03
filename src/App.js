@@ -13,6 +13,13 @@ import NutFacialHydrating from "./assets/Home/NutFacialHydrating.png"
 import AromatiqueCandle from "./assets/Home/AromatiqueCandle.png"
 import BrnozeIncense from "./assets/Home/BronzeIncense.png"
 import MurasakiAromatique from "./assets/Home/MurasakiAromatique.png"
+import { useMediaQuery,useTheme } from "@mui/material";
+
+
+import Footer from "./components/Footer/footer_index";
+import StoreLocatorSlides from "./components/StoreLocatorSlides";
+import Header from "./components/Header/header_index"
+import SwipeableTemporaryDrawer from "./components/SwipeableTemporaryDrawer";
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -22,7 +29,9 @@ const slideData = [1,2,3,4,5]
 
 const App=()=> {
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const theme = useTheme()
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"))
+  const [currentSlide, setCurrentSlide] = useState(-1);
   const CustomPrevArrow = (props) => {
     return <div className="slick-prev" onClick={props.onClick} />;
   };
@@ -70,21 +79,25 @@ const App=()=> {
           }
     ]
   }
-  const showPrevArrow = currentSlide > 0;
-  const showNextArrow = currentSlide < slideData.length - settings.slidesToShow;
+  const showPrevArrow = currentSlide > 1;
+  const showNextArrow = currentSlide+1 < slideData.length - settings.slidesToShow;
 
   settings.prevArrow = showPrevArrow ? <CustomPrevArrow /> : '';
   settings.nextArrow = showNextArrow ? <CustomNextArrow /> : '';
 
-  const indicators = Array.from({ length: slideData.length-settings.slidesToShow+1 }, (_, index) => (
+  const indicators = Array.from({ length: slideData.length+1-settings.slidesToShow }, (_, index) => (
     <div
       key={index}
       className={`indicator-line ${index === currentSlide ? 'active' : ''}`}
     ></div>
   ))
   return(
+    <>
+    {isMatch ?
+    <SwipeableTemporaryDrawer/>: <Header/>}
     <div className='home-container'>
       <div className='top-container'>
+      
         <div className='home-top-container'>
           <h1 className='home-heading'>Aesop</h1>
           <div className='home-top-sub-container'>
@@ -178,7 +191,6 @@ const App=()=> {
           a guide to ensuring a healthy complexion through<br/>
           the warmer months.</p>
           <button type="button" className='warp-up-button'>Read more <BiRightArrowAlt /></button>
-
         </div>
         <img src={SkinCare} alt="skincare" className="warp-up-image" />
       </dvi>
@@ -315,15 +327,18 @@ const App=()=> {
           </div>
         <div className="indicator-container">{indicators}</div>
       </div>
+      
+
+      <StoreLocatorSlides />
 
       <div className="home-bottom-container">
         <h1 className="quotation">‘Life never becomes a habit to me. It's always a marvel.’</h1>
         <p className="quoted-by">Katherine Mansfield</p>
       </div>
-    
-  
+      <Footer />
       
     </div>
+    </>
   )
 }
 

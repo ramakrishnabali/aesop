@@ -1,0 +1,105 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  
+  .footer-container {
+    background-color: rgb(28, 27, 27);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .subscription-container {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .about-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .footer-sub-text {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .h-rule-about {
+    width: 300px;
+    height: 0px;
+    border: 1px solid white;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .h-rule-sub {
+    width: 550px;
+    height: 0px;
+    border: 1px solid white;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .email-input-container {
+    width: 550px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  .email-input {
+    padding: 5px;
+    width: 500px;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+  }
+  
+  .right-icon {
+    color: white;
+  }
+  
+  .email-input::placeholder {
+    color: white;
+    font-size: 20px;
+  }
+  
+  .checkbox-label {
+    color: white;
+  }
+  
+  .check-box {
+    height: 17px;
+    width: 17px;
+  }
+  
+  .anchor {
+    color: white;
+  }
+  
+  .ul-container {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .list-item {
+    color: white;
+  }
