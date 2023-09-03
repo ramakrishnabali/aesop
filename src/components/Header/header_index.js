@@ -7,7 +7,7 @@ const Header =()=> {
 
     return (
         <div style={{width:"100%"}}>
-        <AppBar sx={{backgroundColor:"lightgray",color:"black",p:"15px",maxWidth:"100%"}}>
+        <AppBar sx={{backgroundColor:"lightgray",color:"black",p:"15px",maxWidth:"100vw"}}>
             <Toolbar>
                 {/* <Tabs sx={{marginRight:"auto"}}>
                 <Tab label="SkinCare"  />

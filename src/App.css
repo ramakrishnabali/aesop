@@ -63,7 +63,7 @@
 .home-top-sub-small-container{
   display: none;
 }
-@media (max-width:640px) {
+@media (max-width:768px) {
   .top-container{
     background-image: url(./assets/Home/smallDevice.jpg);
   background-size: cover;

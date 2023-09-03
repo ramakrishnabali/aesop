@@ -31,6 +31,7 @@ const App=()=> {
 
   const theme = useTheme()
   const isMatch = useMediaQuery(theme.breakpoints.down("md"))
+  // console.log(theme)
   const [currentSlide, setCurrentSlide] = useState(-1);
   const CustomPrevArrow = (props) => {
     return <div className="slick-prev" onClick={props.onClick} />;
@@ -93,9 +94,10 @@ const App=()=> {
   ))
   return(
     <>
+    
+    <div className='home-container'>
     {isMatch ?
     <SwipeableTemporaryDrawer/>: <Header/>}
-    <div className='home-container'>
       <div className='top-container'>
       
         <div className='home-top-container'>

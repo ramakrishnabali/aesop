@@ -38,19 +38,21 @@ export default function SwipeableTemporaryDrawer() {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      // sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : "0px" }}
+      sx={{overflow:"auto",width: anchor === "right" ? "100vw":"0px"}}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+        {[' SkinCare', ' Body&Hand', ' Hair', 'Fragrance'].map((text, index) => (
+          <ListItem key={text} disablePadding >
             <ListItemButton>
-              <ListItemIcon>
+              {/* <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
+              </ListItemIcon> */}
               <ListItemText primary={text} />
+              <Divider />
             </ListItemButton>
           </ListItem>
         ))}
@@ -72,8 +74,8 @@ export default function SwipeableTemporaryDrawer() {
   );
 
   return (
-    <div style={{width:"100%"}}>
-            <AppBar  sx={{backgroundColor:"lightgray",color:"black",p:"15px",maxWidth:"100%"}}>
+
+            <AppBar  sx={{backgroundColor:"lightgray",color:"black",p:"0px",maxWidth:"100vw",left:"0px"}}>
                 <Toolbar>
                     <Typography>
                         Aesop
@@ -81,7 +83,7 @@ export default function SwipeableTemporaryDrawer() {
                     <SearchIcon  sx={{color:"black" , marginLeft:"auto"}}/>
                     <FavoriteBorderIcon sx={{marginLeft:"15px",color:"black"}}/>
                     <Typography sx={{marginLeft:"15px",color:"black"}}>
-                        Aesop
+                        Cart
                     </Typography>
                     <Button onClick={toggleDrawer(anchor, true)} sx={{color:"black"}}><DragHandleIcon/></Button>
                     <SwipeableDrawer
@@ -94,9 +96,5 @@ export default function SwipeableTemporaryDrawer() {
                     </SwipeableDrawer>
                 </Toolbar>
             </AppBar>
-          
-        
-      
-    </div>
   );
 }
