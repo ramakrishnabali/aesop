@@ -116,6 +116,10 @@
   align-items: center;
   cursor: pointer;
 }
+.discover-button:hover{
+  background-color: #ffffff;
+  color: #333;
+}
 .warp-up-main-container{
   max-width: 100%;
   display: flex;
@@ -205,6 +209,10 @@
   align-items: center;
   cursor: pointer;
 }
+.warp-up-button:hover{
+  background-color: #333;
+  color: #fffef2;
+}
 .post-poo-main-container{
   width: 100%;
   display: flex;
@@ -293,15 +301,18 @@ text-align: center;
   height: 700px; */
 /* } */
 .nature-bar-soaps-heading{
-  text-decoration: underline;
   text-align: center;
   color: #333;
   font-size: 21px;
   font-weight: 600;
-  text-decoration-thickness: 1px;
+  
   width: 90%;
   margin: 15px 10px;
   cursor: pointer;
+}
+.nature-bar-soaps-heading:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 .nature-bar-sopas-desc{
   text-align: center;

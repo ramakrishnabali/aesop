@@ -1,5 +1,6 @@
 // import {BrowserRouter,Routes,Route} from "react-router-dom"
 // import Home from "./components/Home"
+import { Tooltip } from "@mui/material"
 import { useState } from "react";
 import Slider from "react-slick";
 import { BiRightArrowAlt } from "react-icons/bi";
@@ -32,7 +33,7 @@ const App=()=> {
   const theme = useTheme()
   const isMatch = useMediaQuery(theme.breakpoints.down("md"))
   // console.log(theme)
-  const [currentSlide, setCurrentSlide] = useState(-1);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const CustomPrevArrow = (props) => {
     return <div className="slick-prev" onClick={props.onClick} />;
   };
@@ -129,36 +130,48 @@ const App=()=> {
             <Slider {...settings}>
                   <div  className="brand-image">
                     <div className='home-top-sub-container' style={{marginBottom:"100px"}}>
-                      <p className='bar-soaps-para' style={{color:"black"}}>Bar Soaps</p>
-                      <h1  className='home-heading' style={{color:"black"}}> A body care calssic, reimagined</h1>
-                      <p className='bar-soaps-para' style={{color:"black"}}>Breathing new life into the humble bar soap are Nurture,<br/>
-                        Polish and Refresh—three additions to the range, each imparting<br/>
-                          a unique constellation of benefits.</p>
-                      <button type="button" className='discover-button' style={{color:"black",border:"none",padding:"0px",justifyContent:"flex-start"}}>Discover Bar Soaps <BiRightArrowAlt /></button>
+                      <p className='bar-soaps-para' style={{color:"black"}}>For the body</p>
+                      <h1  className='home-heading' style={{color:"black"}}> An expression of care</h1>
+                      <p className='bar-soaps-para' style={{color:"black"}}>Aesop formulations offer the body deserving care, to cleanse, replenish, and nourish skin. Each product is a sensory pleasure to use with its own delightful aroma.<br/>
+                    </p>
+                      <button type="button" className='discover-button' style={{color:"black",border:"none",padding:"0px",justifyContent:"flex-start"}}>See All Body Care <BiRightArrowAlt /></button>
                     </div>
                   </div> 
 
                    <div  className="brand-image">
                       <img src={BodyNuture} alt="CELEBRE125x125" className='image-brand'  style={{marginTop:"117px"}} />
-                      <h1 className="nature-bar-soaps-heading">Nature Bar Soaps</h1>
+                      <h1 className="nature-bar-soaps-heading">
+                        <Tooltip title="Link to nature bar soap" placement="bottom-end">
+                             Nature Bar Soaps
+                        </Tooltip>
+                        </h1>
                       <p className="nature-bar-sopas-desc">Offers a mild yet effective cleanse</p>
                   </div>
 
                   <div  className="brand-image">
                     <img src={BodyNuture} alt="CELEBRE125x125" className='image-brand'  style={{marginTop:"117px"}}/>
-                    <h1 className="nature-bar-soaps-heading">Nature Bar Soaps</h1>
+                    <h1 className="nature-bar-soaps-heading">
+                      <Tooltip title="Link to nature bar soap" placement="bottom-end">
+                             Nature Bar Soaps
+                        </Tooltip></h1>
                       <p className="nature-bar-sopas-desc">Offers a mild yet effective cleanse</p>
                   </div>
 
                   <div  className="brand-image">
                     <img src={BodyNuture} alt="CELEBRE125x125" className='image-brand'  style={{marginTop:"117px"}}/>
-                    <h1 className="nature-bar-soaps-heading">Nature Bar Soaps</h1>
+                    <h1 className="nature-bar-soaps-heading">
+                      <Tooltip title="Link to nature bar soap" placement="bottom-end">
+                             Nature Bar Soaps
+                        </Tooltip></h1>
                       <p className="nature-bar-sopas-desc">Offers a mild yet effective cleanse</p>
                   </div>
 
                    <div  className="brand-image">
                     <img src={BodyNuture} alt="CELEBRE125x125" className='image-brand'  style={{marginTop:"117px"}}/>
-                    <h1 className="nature-bar-soaps-heading">Nature Bar Soaps</h1>
+                    <h1 className="nature-bar-soaps-heading">
+                      <Tooltip title="Link to nature bar soap" placement="bottom-end">
+                             Nature Bar Soaps
+                        </Tooltip></h1>
                       <p className="nature-bar-sopas-desc">Offers a mild yet effective cleanse</p>
                   </div>
 
@@ -202,11 +215,10 @@ const App=()=> {
             <Slider {...settings}>
                   <div  className="brand-image">
                     <div className='home-top-sub-container'>
-                      <p className='bar-soaps-para' style={{color:"black"}}>Bar Soaps</p>
-                      <h1  className='home-heading' style={{color:"black"}}> A body care calssic, reimagined</h1>
-                      <p className='bar-soaps-para' style={{color:"black"}}>Breathing new life into the humble bar soap are Nurture,<br/>
-                        Polish and Refresh—three additions to the range, each imparting<br/>
-                          a unique constellation of benefits.</p>
+                      <p className='bar-soaps-para' style={{color:"black"}}>For the skin</p>
+                      <h1  className='home-heading' style={{color:"black"}}> Attention for all types</h1>
+                      <p className='bar-soaps-para' style={{color:"black"}}>The well-being of your skin is the product of hydration, nourishment, and protection through discerning rituals. Explore requisite skin care for all skin types.<br/>
+                      </p>
                       <button type="button" className='discover-button' style={{color:"black",border:"none",padding:"0px",justifyContent:"flex-start"}}>Discover Bar Soaps <BiRightArrowAlt /></button>
                     </div>
                   </div> 
@@ -274,12 +286,11 @@ const App=()=> {
             <Slider {...settings}>
                   <div  className="brand-image">
                     <div className='home-top-sub-container'>
-                      <p className='bar-soaps-para' style={{color:"black"}}>Bar Soaps</p>
-                      <h1  className='home-heading' style={{color:"black"}}> A body care calssic, reimagined</h1>
-                      <p className='bar-soaps-para' style={{color:"black"}}>Breathing new life into the humble bar soap are Nurture,<br/>
-                        Polish and Refresh—three additions to the range, each imparting<br/>
-                          a unique constellation of benefits.</p>
-                      <button type="button" className='discover-button' style={{color:"black",border:"none",padding:"0px",justifyContent:"flex-start"}}>Discover Bar Soaps <BiRightArrowAlt /></button>
+                      <p className='bar-soaps-para' style={{color:"black"}}>For the home</p>
+                      <h1  className='home-heading' style={{color:"black"}}> Domestic pleasures</h1>
+                      <p className='bar-soaps-para' style={{color:"black"}}>Our range of aromatic formulations for the home are practical and pleasing in equal measure.<br/>
+                        </p>
+                      <button type="button" className='discover-button' style={{color:"black",border:"none",padding:"0px",justifyContent:"flex-start"}}>See all Home <BiRightArrowAlt /></button>
                     </div>
                   </div> 
 

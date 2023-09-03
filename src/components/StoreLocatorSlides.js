@@ -71,12 +71,10 @@ const StoreLocatorSlides = ()=>{
     return(
     <div className="store-locator-container">
           <div className="warp-up-sub-container">
-            <p className="warp-up">The Athenaeum</p>
-            <h1 className="wrap-up-heading">The warm-up </h1>
-            <p className="warp-up-para">In The Athenaeum, our digital reading room:<br/>
-            a guide to ensuring a healthy complexion through<br/>
-            the warmer months.</p>
-            <button type="button" className='warp-up-button'>Read more <BiRightArrowAlt /></button>
+            <h1 className="wrap-up-heading">Store locator </h1>
+            <p className="warp-up-para">Our consultants are available to host you in-store and provide tailored guidance on gift purchases. <br/>
+           </p>
+            <button type="button" className='warp-up-button'>Find a nearby store <BiRightArrowAlt /></button>
           </div>
 
           <div className="store-locator-slides">
