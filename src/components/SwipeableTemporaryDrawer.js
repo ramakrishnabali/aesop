@@ -8,12 +8,14 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+// import InboxIcon from '@mui/icons-material/MoveToInbox';
+// import MailIcon from '@mui/icons-material/Mail';
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import DragHandleIcon from '@mui/icons-material/DragHandle';
 import SearchIcon from '@mui/icons-material/Search';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import CloseIcon from '@mui/icons-material/Close';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 const anchor = "right"
 
 export default function SwipeableTemporaryDrawer() {
@@ -25,6 +27,7 @@ export default function SwipeableTemporaryDrawer() {
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
+    console.log(event)
     if (
       event &&
       event.type === 'keydown' &&
@@ -37,21 +40,36 @@ export default function SwipeableTemporaryDrawer() {
   };
 
   const list = (anchor) => (
+    <>
+    
     <Box
       // sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : "0px" }}
-      sx={{overflow:"auto",width: anchor === "right" ? "100vw":"0px"}}
+      sx={{overflow:"auto", paddingRight:"0px", width:anchor === "right" ? "100vw":"0px"}}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
+      // onClick={toggleDrawer(anchor, false)}
+      // onKeyDown={toggleDrawer(anchor, false)}
     >
+
       <List>
-        {[' SkinCare', ' Body&Hand', ' Hair', 'Fragrance'].map((text, index) => (
-          <ListItem key={text} disablePadding >
+        <ListItem sx={{maxWidth:"100%",p:"20px"}}>
+            <ListItemText primary = {"Aesop"} />
+            <ListItemIcon>
+              <SearchIcon sx={{marginLeft:"auto"}}/>
+              <FavoriteBorderIcon sx={{marginLeft:"20px"}}/>
+              <ListItemText sx={{marginLeft:"20px"}} primary = {"Cart"} />
+            </ListItemIcon>
+            <CloseIcon sx={{marginLeft:"20px"}}
+             onClick={toggleDrawer(anchor, false)}
+              onKeyDown={toggleDrawer(anchor, false)}
+              />
+        </ListItem>
+        {[' SkinCare', ' Body&Hand', ' Hair', 'Fragrance',' Home'].map((text, index) => (
+          <ListItem key={index}>
             <ListItemButton>
-              {/* <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon> */}
               <ListItemText primary={text} />
+              <ListItemIcon>
+               <KeyboardArrowRightIcon sx={{marginLeft:"auto"}}/>
+              </ListItemIcon>
               <Divider />
             </ListItemButton>
           </ListItem>
@@ -59,18 +77,21 @@ export default function SwipeableTemporaryDrawer() {
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
+        {['Kits&Travel', 'Gifts'," Read","Stores","Facial Appointments"].map((text, index) => (
+           <ListItem key={index}>
+           <ListItemButton>
+             <ListItemText primary={text} />
+             <ListItemIcon>
+              <KeyboardArrowRightIcon sx={{marginLeft:"auto"}}/>
+             </ListItemIcon>
+             <Divider />
+           </ListItemButton>
+         </ListItem>
         ))}
       </List>
+  
     </Box>
+    </>
   );
 
   return (
@@ -91,6 +112,7 @@ export default function SwipeableTemporaryDrawer() {
                         open={state[anchor]}
                         onClose={toggleDrawer(anchor, false)}
                         onOpen={toggleDrawer(anchor, true)}
+                        sx={{paddingRight:"0px",overflow:"auto"}}
                     >
                         {list(anchor)}
                     </SwipeableDrawer>
