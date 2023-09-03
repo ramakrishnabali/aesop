@@ -6,6 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 const Header =()=> {
 
     return (
+        <div style={{width:"100%"}}>
         <AppBar sx={{backgroundColor:"lightgray",color:"black",p:"15px"}}>
             <Toolbar>
                 {/* <Tabs sx={{marginRight:"auto"}}>
@@ -57,6 +58,7 @@ const Header =()=> {
                 <Typography variant="contained" sx={{ backgroundColor: 'transparent', color: 'black',marginLeft:"25px",cursor:"pointer" }}>Cart</Typography>
             </Toolbar>
         </AppBar>
+        </div>
     )
 }
 

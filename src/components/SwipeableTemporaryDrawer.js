@@ -72,8 +72,7 @@ export default function SwipeableTemporaryDrawer() {
   );
 
   return (
-    <div>
-
+    <div style={{width:"100%"}}>
             <AppBar  sx={{backgroundColor:"lightgray",color:"black",p:"15px"}}>
                 <Toolbar>
                     <Typography>
