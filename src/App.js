@@ -349,7 +349,7 @@ const App=()=> {
         <p className="quoted-by">Katherine Mansfield</p>
       </div>
       <Footer />
-      
+      <hr className="rk-line"/>
     </div>
     </>
   )

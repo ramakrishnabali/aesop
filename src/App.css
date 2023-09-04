@@ -484,3 +484,9 @@ text-align: center;
     display: none;
   }
 }
+
+.rk-line{
+  width: 100%;
+  color: #ffffff;
+  line-height: 2px;
+}
