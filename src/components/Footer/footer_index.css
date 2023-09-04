@@ -46,19 +46,29 @@
   }
   
   .h-rule-about {
-    width: 100%;
+    width: 360px;
     height: 0px;
     border: 1px solid white;
     margin-left: 0px;
     margin-bottom: 0px;
   }
+  @media (max-width:768px) {
+    .h-rule-about{
+      max-width: 100%;
+    }
+  }
   
   .h-rule-sub {
-    width: 100%;
+    width: 500px;
     height: 0px;
     border: 1px solid white;
     margin-left: 0px;
     margin-bottom: 0px;
+  }
+  @media (max-width:768px) {
+    .h-rule-sub{
+      max-width: 100%;
+    }
   }
   
   .email-input-container {

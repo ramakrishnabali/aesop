@@ -47,6 +47,7 @@ const Footer = () => {
             <li className="list-item">Terms and conditions</li>
           </ul>
         </div>
+        
         <div className="about-container">
           <h1 className="footer-sub-text">Services</h1>
           <hr className="h-rule-about" />
