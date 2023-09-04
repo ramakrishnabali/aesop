@@ -241,6 +241,7 @@
   .post-poo-image{
     height:480px;
     order: 0;
+    max-width: 100%;
   }
 }
 @media (max-width:576px) {
